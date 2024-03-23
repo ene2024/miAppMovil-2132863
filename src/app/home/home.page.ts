@@ -9,5 +9,11 @@ export class HomePage {
 
   constructor() {}
 
-  condicion: boolean = false;
+  title: string = 'Mi nueva página!';
+
+  hazmeClic(): void{
+    alert("hiciste clic!");
+  }
+
+  imgUrl: string= "https://i.redd.it/7ksiaa4exhh01.gif";
 }

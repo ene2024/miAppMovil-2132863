@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      {{title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,6 +14,10 @@
   </ion-header>
 
   <div id="container">
-    <div [ngClass]="{'rojo':condicion, azul:condicion==false}">Si <strong>condicion</strong> es verdadero esto sera <strong>rojo</strong>, pero si es falso entinces sera <strong>azul</strong></div>
+    <ion-button (click)="hazmeClic()">Hazme clic!</ion-button>
+  </div>
+
+  <div>
+    <img [src]="imgUrl">
   </div>
 </ion-content>
