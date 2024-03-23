@@ -14,7 +14,6 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div [ngClass]="{'rojo':condicion, azul:condicion==false}">Si <strong>condicion</strong> es verdadero esto sera <strong>rojo</strong>, pero si es falso entinces sera <strong>azul</strong></div>
   </div>
 </ion-content>
