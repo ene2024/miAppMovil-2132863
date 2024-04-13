@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,11 +11,19 @@ export class HomePage {
 
   constructor() {}
 
-  title: string = 'Mi nueva página!';
+  title: string = 'Organizador de tareas!';
 
-  hazmeClic(): void{
-    alert("hiciste clic!");
+
+  formData = {
+    username: '',
+    password: '',
+    description: ''
+  };
+
+  onSubmit() {
+    console.log('Datos del formulario:', this.formData);
   }
 
-  imgUrl: string= "https://i.redd.it/7ksiaa4exhh01.gif";
+
+
 }

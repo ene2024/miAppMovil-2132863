@@ -12,8 +12,18 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+    
 
+  <ion-card id="logIn">
+    <ion-card-title>Agregar tarea</ion-card-title>
+    <form (ngSubmit)="onSubmit()">
+    
+      <ion-textarea id="Usuario"  label="Nombre de la tarea" name="username" fill="outline" [(ngModel)]="formData.username"></ion-textarea>
+      <ion-input id="Contraseña" label="Fecha estimada de conclusion"  fill="outline" name="password" type="date" [(ngModel)]="formData.password"></ion-input>
+      <ion-textarea id="Descripcion" label="Descripcion" [counter]="true" maxlength="150" fill="outline" name="description" [(ngModel)]="formData.description"></ion-textarea>
 
- <app-lista></app-lista>
-
+      <ion-button id="Enviar" type="submit" color="success">Agregar</ion-button> 
+    </form>
+    
+  </ion-card>
 </ion-content>
