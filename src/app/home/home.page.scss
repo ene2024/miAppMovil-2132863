@@ -3,9 +3,8 @@
 #logIn{
   height: 70dvh;
   width: 30dvw;
-  position: sticky;
-  top: 10dvh;
-  left: 30dvw;
+  position: relative;
+
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -25,4 +24,33 @@
 ion-card-title{
   padding-left: 5px;
   padding-top: 10px;
+}
+
+#Tareas{
+  height: 70dvh;
+  width: 30dvw;
+  position: sticky;
+  font-size: 1rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+
+}
+
+#tarea-uno{
+  border: solid;
+  border-width: 1px;
+  height: 15dvh;
+  border-bottom-width: 30px;
+  border-color: green;
+}
+
+ion-content {
+  --background: #f0f0f0;
 }

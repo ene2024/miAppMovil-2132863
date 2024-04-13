@@ -13,6 +13,21 @@
     </ion-toolbar>
   </ion-header>
     
+<div id="container">
+
+  <ion-card id="Tareas">
+    <ion-card-title>Mi App de Tareas</ion-card-title>
+    <ion-card-content id="tarea-uno">
+      Esta es mi tarea! <b>{{formData.description}}</b>
+      <div>Fecha <b>{{formData.password}}</b></div>
+      <div style="position: fixed;top: 15dvh; color: black;">+ Ver mas detalles</div>
+    </ion-card-content>
+    <ion-fab style="position: fixed; bottom: 15px; right: 15px;">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-card>
 
   <ion-card id="logIn">
     <ion-card-title>Agregar tarea</ion-card-title>
@@ -26,4 +41,8 @@
     </form>
     
   </ion-card>
+
+
+  </div>
 </ion-content>
+
