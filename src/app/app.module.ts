@@ -6,8 +6,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import {FormularioComponent } from './formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 

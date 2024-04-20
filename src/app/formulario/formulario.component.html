@@ -1,3 +1,55 @@
 <p>
-  formulario works!
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Blank</ion-title>
+      </ion-toolbar>
+    </ion-header>
+      
+  <div id="container">
+  
+    <ion-card id="Tareas">
+      <ion-card-title>Mi App de Tareas</ion-card-title>
+        <ion-card-content>
+          
+          <div id="tarea-uno" *ngFor="let tarea of tareas">
+              Descripcion <b>{{tarea.description}}</b><br>
+              Fecha <b>{{tarea.fecha}}</b><br>
+              <ion-button slot="start" color="success">+ Ver mas detalles</ion-button>
+          </div>
+          
+        </ion-card-content>
+      <ion-fab id="botoncito" style="position: fixed; bottom: 15px; right: 15px;">
+        <ion-fab-button color="success">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card>
+  
+    <ion-modal id="logIn" trigger="botoncito">
+      <ng-template>
+      <div #insertarTarea>
+        <div id="head">
+        <ion-buttons slot="start">
+          <ion-button (click)="cancel()" color="danger">Cancel</ion-button>
+        </ion-buttons>
+        <ion-title>Agregar tarea</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="confirm()" [strong]="true" color="primary">Confirm</ion-button>
+        </ion-buttons>
+      </div>
+        <form (ngSubmit)="onSubmit()">
+        
+          <ion-textarea id="Nombre"  label="Nombre de la tarea" name="username" fill="outline" [(ngModel)]="formData.nombre"></ion-textarea>
+          <ion-input id="Fecha" label="Fecha estimada de conclusion"  fill="outline" name="password" type="date" min="2024-01-01" [(ngModel)]="formData.fecha"></ion-input>
+          <ion-textarea id="Descripcion" label="Descripcion" [counter]="true" maxlength="150" fill="outline" name="description" [(ngModel)]="formData.description"></ion-textarea>
+  
+          <ion-button id="Enviar" type="submit" color="success" slot="end">Agregar</ion-button> 
+        </form>
+      </div>
+      </ng-template>
+    </ion-modal>
+    
+    </div>
+  </ion-content>
 </p>

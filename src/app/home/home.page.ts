@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { FormularioComponent } from '../formulario/formulario.component';
 
 
 @Component({
@@ -11,18 +11,7 @@ export class HomePage {
 
   constructor() {}
 
-  title: string = 'Organizador de tareas!';
-
-
-  formData = {
-    username: '',
-    password: '',
-    description: ''
-  };
-
-  onSubmit() {
-    console.log('Datos del formulario:', this.formData);
-  }
+ 
 
 
 

@@ -1,0 +1,64 @@
+
+
+
+ion-modal {
+    --height: 80%;
+    --border-radius: 16px;
+  background-color: #f0f0f0;
+    --width: 50%;
+  }
+  
+  
+  
+  #Enviar{
+    position:sticky;
+    left: 20dvw;
+  }
+  
+  #Descripcion{
+    height: 30dvh;
+  }
+  
+#head{
+    display: flex;
+    flex-direction: row;
+
+}
+  
+  #Tareas{
+    height: 90dvh;
+    width: 30dvw;
+    position: sticky;
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: fixed;
+    left: 33dvw;
+    border-radius: 15px;
+  }
+  
+  #container{
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  #tarea-uno{
+    border: solid;
+    border-width: 3px;
+    height: 20dvh;
+    border-color: green;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  
+  ion-content {
+    --background: #f0f0f0;
+  }
+  
+  #prueba{
+    opacity: 50;
+  }
+  
