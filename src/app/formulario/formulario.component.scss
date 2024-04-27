@@ -33,7 +33,7 @@ ion-modal {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    //gap: 5px;
     position: fixed;
     left: 33dvw;
     border-radius: 15px;
@@ -46,13 +46,11 @@ ion-modal {
   }
   
   #tarea-uno{
-    border: solid;
-    border-width: 3px;
-    height: 150px;
-    border-color: green;
-    border-radius: 10px;
     padding-left: 10px;
     font-size: large;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
   
   ion-content {
@@ -69,4 +67,8 @@ ion-modal {
     flex-direction: column;
     flex-wrap: wrap;
     row-gap: 10px;
+  }
+
+  ion-accordion{
+    border-radius: 5px;
   }
