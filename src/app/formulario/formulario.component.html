@@ -12,9 +12,9 @@
       <ion-card-title>Mi App de Tareas</ion-card-title>
         <ion-card-content>
           
-          <div id="tarea-uno" *ngFor="let tarea of tareas">
-              Descripcion <b>{{tarea.description}}</b><br>
-              Fecha <b>{{tarea.fecha}}</b><br>
+          <div id="tarea-uno" *ngFor="let tareaServicio of tareaServicioArray">
+              Descripcion <b>{{tareaServicio.descripcion}}</b><br>
+              Fecha <b>{{tareaServicio.fecha}}</b><br>
               <ion-button slot="start" color="success">+ Ver mas detalles</ion-button>
           </div>
           
@@ -42,7 +42,7 @@
         
           <ion-textarea id="Nombre"  label="Nombre de la tarea" name="username" fill="outline" [(ngModel)]="formData.nombre"></ion-textarea>
           <ion-input id="Fecha" label="Fecha estimada de conclusion"  fill="outline" name="password" type="date" min="2024-01-01" [(ngModel)]="formData.fecha"></ion-input>
-          <ion-textarea id="Descripcion" label="Descripcion" [counter]="true" maxlength="150" fill="outline" name="description" [(ngModel)]="formData.description"></ion-textarea>
+          <ion-textarea id="Descripcion" label="Descripcion" [counter]="true" maxlength="150" fill="outline" name="descripcion" [(ngModel)]="formData.descripcion"></ion-textarea>
   
           <ion-button id="Enviar" type="submit" color="success" slot="end">Agregar</ion-button> 
         </form>

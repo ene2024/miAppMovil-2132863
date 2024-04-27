@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
+import { Tareas } from 'src/tareas';
+import { TareasService } from './servicios/tareas.service';
 
 @Component({
   selector: 'app-formulario',
@@ -9,6 +11,10 @@ import { OverlayEventDetail } from '@ionic/core/components';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent  implements OnInit {
+
+  constructor(private tareaServicio: TareasService) { }
+
+  tareaServicioArray: Tareas[] = this.tareaServicio.tareas;
 
   @ViewChild(IonModal)
   modal!: IonModal;
@@ -24,34 +30,36 @@ export class FormularioComponent  implements OnInit {
     this.isModalOpen = isOpen;
   }
 
-  formData = {
+  formData: Tareas = {
     nombre: '',
     fecha: '',
-    description: ''
+    descripcion: ''
   };
 
-  tareas : any[] = [];
+  /*tareas : Tareas[] = [];*/
 
+  nuevaTarea: Tareas = {
+    nombre: "",
+    fecha: "",
+    descripcion: ""
+  }
   onSubmit() {
-    console.log('Datos del formulario:', this.tareas);
-    /*var card = document.querySelector("ta")
-    var nuevaTarea = document.createElement("div");
-    var content = document.createTextNode(this.formData.description);
-    nuevaTarea.appendChild(content);*/
+    console.log('Datos del formulario:', this.tareaServicio);
 
-    const nuevaTarea = {
+    this.nuevaTarea = {
       nombre: this.formData.nombre,
       fecha: this.formData.fecha,
-      description: this.formData.description
+      descripcion: this.formData.descripcion
     };
 
-    this.tareas.push(nuevaTarea);
+    //this.tareas.push(this.nuevaTarea); 
+  
+    this.tareaServicio.agregarTarea(this.nuevaTarea)
+
     this.formData.nombre = '';
     this.formData.fecha = '';
-    this.formData.description = '';
-    
+    this.formData.descripcion = '';
   }
-
   cancel() {
     this.modal.dismiss(null, 'cancel');
   }
