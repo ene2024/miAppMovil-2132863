@@ -1,0 +1,14 @@
+<ion-card class="ion-padding" slot="content">
+  <ion-card-title><b>{{detalleTarea.nombre}}</b></ion-card-title>  
+    <ion-card-content>
+      Descripcion <b>{{detalleTarea.descripcion}}</b><br>
+      Fecha <b>{{detalleTarea.fecha}}</b><br>
+    </ion-card-content>
+  
+</ion-card>
+ 
+<ion-fab horizontal="start" vertical="bottom" [routerLink]="'/formulario'">
+  <ion-fab-button color="success">
+    <ion-icon name="arrow-back"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

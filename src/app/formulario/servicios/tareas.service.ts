@@ -20,4 +20,10 @@ export class TareasService {
 
   }
 
+  tareaDetalles(id: string)
+  { 
+    let result: any = this.tareas.findIndex((tarea) => tarea.nombre=id) 
+    return this.tareas[result]
+  }
+
 }

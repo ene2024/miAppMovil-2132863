@@ -11,20 +11,12 @@
     <ion-card id="Tareas">
       <ion-card-title>Mi App de Tareas</ion-card-title>
         <ion-card-content>
-          <ion-accordion-group expand="inset">
           <div id="tarea-uno" *ngFor="let tareaServicio of tareaServicioArray">
-              <ion-accordion>
-                <ion-item slot="header" color="success">
+                <ion-item slot="header" color="success" [routerLink]="['/tarea','tareaServicio.nombre']">
                   <ion-label>{{tareaServicio.nombre}}</ion-label>
                 </ion-item>
-                <div class="ion-padding" slot="content">
-                  Descripcion <b>{{tareaServicio.descripcion}}</b><br>
-                  Fecha <b>{{tareaServicio.fecha}}</b><br>
-                </div>
-              </ion-accordion>
               <!--<ion-button slot="end" color="success">+ Ver mas detalles</ion-button>-->
           </div>
-          </ion-accordion-group>
         </ion-card-content>
       <ion-fab id="botoncito" style="position: fixed; bottom: 15px; right: 15px;">
         <ion-fab-button color="success">
